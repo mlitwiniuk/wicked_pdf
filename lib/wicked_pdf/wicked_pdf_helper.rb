@@ -64,7 +64,7 @@ module WickedPdfHelper
     end
 
     def wicked_pdf_asset_path(asset)
-      if assets.to_s.starts_with?('data')
+      if asset.to_s.starts_with?('data')
         asset
       elsif (pathname = asset_pathname(asset).to_s) =~ URI_REGEXP
         pathname
